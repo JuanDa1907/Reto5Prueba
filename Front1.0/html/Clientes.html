@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>CLIENTES</title>
+
+</head>
+
+<body bgcolor="#125696">
+
+    <div class="container mt-5"> 
+        <div class="jumbotron mt-3">
+        <h1 class="text-center mb-5">Clientes</h1>
+        
+        <table class="table table-striped text-center mt-3">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Edad</th>
+                    <th>E-Mail</th>
+                    <th>Contraseña</th>
+                    <th></th>
+                </tr>
+
+            </thead>
+            <tbody id="resultado4">
+               
+            </tbody>
+        </table>
+        
+        <center>   
+  
+            <a href="/index.html" class="btn btn-warning">Inicio</a>
+            <button type="button" class="btn btn-primary" id="nuevo">Nuevo Cliente</button>
+        </center>
+    </div>    
+    
+<!------------------------------------- Modal Para Guardar ------------------------------------->
+
+<div class="container mt-3">
+  
+    <div class="modal fade" id="guardarCli">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <center><h4 class="modal-title">Registro de Clientes</h4></center>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container mt-5">
+                <div class="container mt-5">
+                    <div class="jumbotron mt-3">
+                        <div id="alerta" class="alert alert-info alert-dismissible fade show">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>Mensaje</strong> <p id="mensaje"></p>
+                        </div>
+                        <h1 class="text-center mb-5">Registro de Cliente</h1>
+            
+                        <label><strong>Cliente</strong></label>
+                        <input type="text" id="name" class="form-control mb-3">
+                        <label><strong>Edad</strong></label>
+                        <input type="number" class="form-control mb-3" id="age">
+                        <label><strong>Correo</strong></label>
+                        <input type="text" class="form-control mb-3" id="email">
+                        <label><strong>Contraseña</strong></label>
+                        <input type="text" class="form-control mb-3" id="password">
+                        <button class="btn btn-primary mb-3" onclick="saveClient()">Guardar Cliente</button>
+           </div>
+          </div>
+          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+
+<!------------------------------------- Modal Para ACTUALIZAR ------------------------------------->
+<div class="container mt-3">
+  
+    <div class="modal fade" id=div class="container mt-3">
+  
+    <div class="modal fade" id="putClient">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <center><h4 class="modal-title">Registro de Clientes</h4></center>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container mt-5">
+                <div class="container mt-5">
+                    <div class="jumbotron mt-3">
+                        <div id="alerta" class="alert alert-info alert-dismissible fade show">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>Mensaje</strong> <p id="mensaje"></p>
+                        </div>
+                        <h1 class="text-center mb-5">Registro de Cliente</h1>
+            
+                        <label><strong>Cliente</strong></label>
+                        <input type="text" id="name" class="form-control mb-3">
+                        <label><strong>Edad</strong></label>
+                        <input type="number" class="form-control mb-3" id="age">
+                        <label><strong>Correo</strong></label>
+                        <input type="text" class="form-control mb-3" id="email">
+                        <label><strong>Contraseña</strong></label>
+                        <input type="text" class="form-control mb-3" id="password">
+                        <button class="btn btn-primary mb-3" onclick="saveClient()">Guardar Cliente</button>
+           </div>
+          </div>
+          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <center><h4 class="modal-title">Registro de Auditorio</h4></center>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container mt-5">
+                <div class="container mt-5">
+                    <div class="jumbotron mt-3">
+                        <div id="alerta" class="alert alert-info alert-dismissible fade show">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>Mensaje</strong> <p id="mensaje"></p>
+                        </div>
+                        <h1 class="text-center mb-5">Registro de Cliente</h1>
+            
+                        <label><strong>Cliente</strong></label>
+                        <input type="text" id="name" class="form-control mb-3">
+                        <label><strong>Edad</strong></label>
+                        <input type="number" class="form-control mb-3" id="age">
+                        <label><strong>Correo</strong></label>
+                        <input type="text" class="form-control mb-3" id="email">
+                        <label><strong>Contraseña</strong></label>
+                        <input type="text" class="form-control mb-3" id="password">
+                        <button class="btn btn-primary mb-3" onclick="saveClient()">Guardar Cliente</button>
+           </div>
+          </div>
+          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+<script src="/js/jsClientes.js"></script>
+</body>
+</html>
